@@ -1,0 +1,237 @@
+/* główne elementy */
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Monospace;
+    color: #323330;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    user-select: none;
+    cursor: url("Media/Img/C_normal.png"), default;
+}
+
+header{
+    background-color: #323330;
+    color: whitesmoke;
+    text-align: center;
+
+    width:85%;
+    min-height: 10vh;
+    margin-left: 15%;
+
+    border-bottom: 2px solid #505050;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    background-color: #F0DB4F;
+
+    width:85%;
+    min-height: 80vh;
+    margin-left: 15%;
+}
+
+footer{
+    background-color: #323330;
+    color: whitesmoke;
+
+    width:85%;
+    min-height: 10vh;
+    margin-left: 15%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* sidebar */
+.button_sidebar{
+    background-color: #323330;
+    z-index: 1;
+    position: fixed;
+    
+    top:0;
+    left: 0;
+    width: 15%;
+    height: 10%;
+    
+    font-size: 50px;
+    color: white;
+}
+
+.button_sidebar:hover{
+    background-color: #505050;
+}
+
+.sidebar{
+    background-color: #323330;
+    color: white;
+    overflow-x: hidden;
+    position: fixed;
+
+    top:0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    padding-top: 10vh;   
+}
+
+.sidebar a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.sidebar a:hover{
+    text-decoration: underline;
+}
+
+header, main, footer, .sidebar{
+    transition: 0.3s;
+}
+
+/* sekcje */
+section{
+    width: 80%;
+    
+    height: 50%;
+    border: 2px solid #323330;
+    border-radius: 2px;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section button div{
+    display: inline-block;
+    transition: 0.5s;
+}
+
+section h2 {
+    margin-left: 20px;
+}
+/* tytuł sekcji */
+section div:nth-child(1){
+    background-color: #323330;
+    color: whitesmoke;
+}
+
+/* kontent sekcji */
+section div:nth-child(2){
+    background-color: #F0DB4F;
+}
+
+/* rozwijany kontent sekcji */
+section div:nth-child(4){
+    background-color: #323330;
+    color:whitesmoke;
+}
+
+.content{
+    font-size: 20px;
+}
+
+.content img, video {
+    float: left;
+    width: 50%;
+    margin-right:5%;
+    margin-bottom: 5%;
+}
+
+form{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+section pre{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    aspect-ratio: 1/1;
+
+    background-image: url("Media/Img/grid.png");
+    background-size:contain;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    letter-spacing: -0.36em;
+    line-height: 0.378em;
+    padding-right: 0.19em;
+}
+
+section p {
+    font-size: 15px;
+    margin: 20px;
+}
+.equation{
+    position: absolute;
+    top:20vh;
+    margin: 10px;
+    margin-left: 30px;
+    font-size: large;
+}
+
+/* kursory */
+.selectable{
+    cursor: url("Media/Img/C_select.png"), pointer;
+}
+
+/* collapsible */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 30%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 0  10px 0 0;
+}
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+  
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2212";
+}
+  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+footer img {
+    width: 100px;
+}
+footer .linki {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

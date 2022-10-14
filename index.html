@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Media/favicon.ico">
+</head>
+<body>
+    <button class="button_sidebar selectable" onclick="switch_sidebar(); buttonClick();" class="selectable">=</button>
+    <div class="sidebar">
+        <a href="#PoczatekStrony" class="selectable">Góra strony</a><br>
+        <a href="#CoToJest" class="selectable">Co to jest</a><br>
+        <a href="#JakSieKorzysta" class="selectable">Jak się korzysta</a><br>
+        <a href="#JakToDziala" class="selectable">Jak to działa</a><br>
+    </div>
+
+    <header id="PoczatekStrony"> 
+        <h1>Programowanie w Java Script</h1>
+    </header>
+    
+    <main>
+        <section id="CoToJest">
+            <div>
+                <h2>Co to jest</h2>
+            </div>
+            <div class="container">
+                <pre></pre>
+                <form>
+                    <input type="number" value="0" class="selectable">
+                    <input type="number" value="0" class="selectable">
+                    <input type="number" value="0" class="selectable">
+                    <input type="number" value="0" class="selectable">
+                </form>
+                <p class="equation"></p>
+                <br>
+            </div>
+
+            
+            <button class="collapsible selectable" onclick="buttonClick();">Czytaj więcej</button>
+            <div class="content">
+                <p>
+                    <img src="Media/Wykres.gif" alt="alternatywny napis">
+                    Program ten służy do graficznego przedstawienia wielomianów na wykresie funkcji.
+                    Użytkownik podaje wartości wielomianów pod wykresem i na ich podstawie powstaje
+                    graficzny obraz tej funkcji.
+                </p>
+                <p>
+                    <img src="Media/Img/Porownanie.png" alt="alternatywny napis">
+                    Wszystko działa sprawnie i dokładnie.
+                    Dowodem na to może być porównanie do wykresów z innych stron internetowych.
+                </p>
+            </div>
+            
+        </section>
+
+        <section  id="JakSieKorzysta">
+            <div>
+                <h2>Jak się korzysta</h2>
+            </div>
+            <p>
+                Tutaj znajduje się instrukcja korzystania z przedstawionego powyżej wykresu.
+            </p>
+            <button class="collapsible selectable" onclick="buttonClick();">Czytaj więcej</button>
+            <div class="content">
+                <p>
+                    <video controls width="50%">Ta przeglądarka nie wspiera znacznika video.
+                        <source src="Media/Film.mp4"/>
+                      </video>
+                      Aby otrzymać funkcję, należy wpisać liczbę danego wsółczynnika w wyznaczonych miejscach
+                        pod wykresem w polach tekstowych.
+                </p>
+            </div>
+        </section>
+
+        <section id="JakToDziala">
+            <div>
+                <h2>Jak to działa</h2>
+            </div>
+            <p>Wykorzystując język programowania Java Script oraz trochę CSS'a,
+                stworzyliśmy w prosty sposób całkiem dokładny wykres wielomianów.
+            </p>
+            <button class="collapsible selectable" onclick="buttonClick();">Czytaj więcej</button>
+            <div class="content">
+                <p>
+                    <img src="Media/Img/Kod.png" alt="alternatywny napis">
+                    Sam kod działa następująco: <br>
+                    Na początku jest zatwierdzana ilość znaków na linię,
+                    następnie z formularza zostają pobrane dane. 
+                    Potem jest tworzona tablica wyników z funkcji,
+                    do której zostaje zapisywany wynik wielomiany dla każdej kolumny.
+                    Dalej wyniki z kolumny są pobierane, i porównywane z aktualnym miejscem
+                    wypisywanego znaku, jeśli dane się zgadzają zostaje dodany widoczny znak,
+                    a jeśli nie, to jest dodany biały znak. Przed końcem zostaje wypisany
+                    ogólny wzór funkcji w lewym rogu, i po tym cały wykres zostaje wypisany.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <h2>
+            Strona napisana przez Piotra Szamockiego
+        </h2>
+        <div class="linki">
+            <a href="https://www.facebook.com">
+                <img src="Media/Img/Facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="Media/Img/Instagram.png" alt="instagram">
+            </a>
+        </div>
+    </footer>
+    <script src="js/sidebar.js"></script>
+    <script src="js/collapsible_section.js"></script>
+    <script src="js/graph_function.js"></script>
+    <script src="js/play_sound.js"></script>
+</body>
+</html>
